@@ -62,7 +62,6 @@ public class ScoutFragment extends Fragment {
     //ViewPager
     private ViewPager viewPager;
 
-    private Toolbar toolbar;
 
     //TextView
     private TextView tv_scoutGuide1;
@@ -112,21 +111,6 @@ public class ScoutFragment extends Fragment {
      * 初始化View
      */
     private void initView() {
-
-
-        toolbar = (Toolbar) fView.findViewById(R.id.toolbar);
-
-        //设置Toolbar标题
-        toolbar.setTitle("球探功能");
-        //设置标题颜色
-        toolbar.setTitleTextColor(getResources().getColor(R.color.color_white));
-        //设置返回键可用
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                finish();
-            }
-        });
 
         //TextView
         tv_scoutGuide1 = (TextView) fView.findViewById(R.id.tv_scoutGuide1);

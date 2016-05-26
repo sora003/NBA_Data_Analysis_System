@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import com.sora.projectn.R;
 import com.sora.projectn.model.Activity.MatchActivity;
-import com.sora.projectn.utils.beans.MatchInfo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,16 +20,16 @@ import java.util.Map;
 /**
  * Created by qhy on 2016/5/3.
  */
-public class MainCardsAdapter extends BaseAdapter {
+public class MainCardsAdapter  extends BaseAdapter {
     private List<String> date = new ArrayList<String>();
-    private List<List<MatchInfo>> matches = new ArrayList<List<MatchInfo>>();
+    private List<List<Map<String,String>>> matches = new ArrayList<List<Map<String,String>>>();
     private LayoutInflater inflater;
     Context mContext;
 
-    public MainCardsAdapter(Map<String,List<MatchInfo>> latestmatches,Context context){
+    public MainCardsAdapter(Map<String,List<Map<String,String>>> latestmatches,Context context){
         for(Map.Entry e:latestmatches.entrySet()){
             date.add(0,(String)e.getKey());
-            matches.add(0,(List<MatchInfo>) e.getValue());
+            matches.add(0,(List<Map<String, String>>) e.getValue());
         }
 
         this.inflater = LayoutInflater.from(context);
@@ -97,7 +96,7 @@ public class MainCardsAdapter extends BaseAdapter {
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                     Intent intent = new Intent(mContext, MatchActivity.class);
-                    intent.putExtra("no",Integer.parseInt(matches.get(pos).get(position).getId()));
+                    intent.putExtra("no",Integer.parseInt(matches.get(pos).get(position).get("id")));
                     mContext.startActivity(intent);
 
 

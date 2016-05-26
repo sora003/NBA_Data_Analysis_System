@@ -1,6 +1,7 @@
 package com.sora.projectn.utils.Adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,19 +9,19 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.sora.projectn.R;
-import com.sora.projectn.utils.beans.PlayerRankInfo;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by qhy on 2016/4/19.
  */
 public class PlayerRankAdapter extends BaseAdapter{
 
-    private List<PlayerRankInfo> rank;
+    private List<Map<String,String>> rank;
     private LayoutInflater inflater;
 
-    public PlayerRankAdapter(List<PlayerRankInfo> rank,Context context){
+    public PlayerRankAdapter(List<Map<String,String>> rank,Context context){
         this.rank = rank;
         this.inflater = LayoutInflater.from(context);
     }
@@ -58,9 +59,13 @@ public class PlayerRankAdapter extends BaseAdapter{
             view.setTag(vh);
 
         }
-        vh.name.setText(rank.get(position).getName());
-        vh.teamname.setText(rank.get(position).getTeamName());
-        vh.data.setText(rank.get(position).getSeasonData());
+        vh.name.setText(rank.get(position).get("name"));
+        vh.teamname.setText(rank.get(position).get("teamName"));
+        vh.data.setText(rank.get(position).get("seasonData"));
+
+        int[] colors = { Color.WHITE, Color.rgb(219, 238, 244) };//RGB颜色
+
+        view.setBackgroundColor(colors[position % 2]);// 每隔item之间颜色不同
 
         return view;
     }
@@ -76,6 +81,5 @@ public class PlayerRankAdapter extends BaseAdapter{
             data = (TextView)view.findViewById(R.id.player_rank_data);
         }
     }
-    ///
 
 }

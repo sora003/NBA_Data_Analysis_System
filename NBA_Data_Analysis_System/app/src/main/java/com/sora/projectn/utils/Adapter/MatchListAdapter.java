@@ -1,6 +1,7 @@
 package com.sora.projectn.utils.Adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,19 +9,19 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.sora.projectn.R;
-import com.sora.projectn.utils.beans.MatchInfo;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by qhy on 2016/5/4.
  */
 public class MatchListAdapter extends BaseAdapter {
 
-    private List<MatchInfo> matches;
+    private List<Map<String,String>> matches;
     private LayoutInflater inflater;
 
-    public MatchListAdapter(List<MatchInfo> matches,Context context){
+    public MatchListAdapter(List<Map<String,String>> matches,Context context){
         this.matches = matches;
         this.inflater = LayoutInflater.from(context);
     }
@@ -58,10 +59,13 @@ public class MatchListAdapter extends BaseAdapter {
             view.setTag(vh);
 
         }
-        vh.hometeam.setText(matches.get(position).getHomeTeam());
-        vh.matchscore.setText(matches.get(position).getHomeScore()+":"+matches.get(position).getVisitingScore());
-        vh.visitteam.setText(matches.get(position).getVisitingTeam());
+        vh.hometeam.setText(matches.get(position).get("homeTeam"));
+        vh.matchscore.setText(matches.get(position).get("homeScore")+":"+matches.get(position).get("visitingScore"));
+        vh.visitteam.setText(matches.get(position).get("visitingTeam"));
 
+        int[] colors = { Color.WHITE, Color.rgb(219, 238, 244) };//RGB颜色
+
+        view.setBackgroundColor(colors[position % 2]);// 每隔item之间颜色不同
 
         return view;
     }

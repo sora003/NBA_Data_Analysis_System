@@ -1,6 +1,7 @@
 package com.sora.projectn.utils.Adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,9 +9,9 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.sora.projectn.R;
-import com.sora.projectn.utils.beans.TeamRankInfo;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * Created by qhy on 2016/4/19.
@@ -18,9 +19,9 @@ import java.util.List;
  */
 public class TeamRankAdapter extends BaseAdapter {
 
-    private List<TeamRankInfo> rank;
+    private List<Map<String,String>> rank;
     private LayoutInflater inflater;
-    public TeamRankAdapter(List<TeamRankInfo> rank ,Context context){
+    public TeamRankAdapter(List<Map<String,String>> rank ,Context context){
         inflater = LayoutInflater.from(context);
         this.rank = rank;
     }
@@ -61,11 +62,14 @@ public class TeamRankAdapter extends BaseAdapter {
             view.setTag(vh);
 
         }
-        vh.rank.setText(rank.get(position).getRank());
-        vh.name.setText(rank.get(position).getName());
-        vh.winorlose.setText(rank.get(position).getWins()+"/"+rank.get(position).getLoses());
-        vh.gamebehind.setText(rank.get(position).getGamesBehind());
+        vh.rank.setText(rank.get(position).get("rank"));
+        vh.name.setText(rank.get(position).get("name"));
+        vh.winorlose.setText(rank.get(position).get("wins")+"/"+rank.get(position).get("loses"));
+        vh.gamebehind.setText(rank.get(position).get("gamesBehind"));
 
+        int[] colors = { Color.WHITE, Color.rgb(219, 238, 244) };//RGB颜色
+
+        view.setBackgroundColor(colors[position % 2]);// 每隔item之间颜色不同
 
         return view;
     }

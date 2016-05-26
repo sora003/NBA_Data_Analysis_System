@@ -8,7 +8,6 @@
     android:id="@+id/coach_fragment"
     tools:context="com.sora.projectn.model.Activity.CoachActivity">
 
-    <include layout="@layout/custom_toolbar"/>
 
     <LinearLayout
         android:layout_width="match_parent"

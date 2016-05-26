@@ -31,9 +31,9 @@ import java.util.ArrayList;
 
 public class CoachTrainFragment extends Fragment {
     private ArrayList<PlayerTrainingInfo> playerTrainingInfoList = new ArrayList<>();
-    private ArrayList<PlayerHistoryMatchInfo> PlayerHistoryMatchInfoList1 = new ArrayList<>();
-    private ArrayList<PlayerHistoryMatchInfo> PlayerHistoryMatchInfoList2 = new ArrayList<>();
-    private ArrayList<PlayerHistoryMatchInfo> PlayerHistoryMatchInfoList3 = new ArrayList<>();
+    private ArrayList<PlayerHistoryMatchInfo> playerMatchInfoList1 = new ArrayList<>();
+    private ArrayList<PlayerHistoryMatchInfo> playerMatchInfoList2 = new ArrayList<>();
+    private ArrayList<PlayerHistoryMatchInfo> playerMatchInfoList3 = new ArrayList<>();
     private ArrayList<Integer> matchIdList = new ArrayList<>();
     private int teamId;
     private Context mContext;
@@ -211,7 +211,7 @@ public class CoachTrainFragment extends Fragment {
                                             player.setTurnOver(0);
                                             player.setFoul(0);
                                             player.setScore(0);
-                                            PlayerHistoryMatchInfoList1.add(player);
+                                            playerMatchInfoList1.add(player);
                                         }
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             JSONObject JO = jsonArray.getJSONObject(i);
@@ -235,7 +235,7 @@ public class CoachTrainFragment extends Fragment {
                                             player.setTurnOver(0);
                                             player.setFoul(0);
                                             player.setScore(0);
-                                            PlayerHistoryMatchInfoList2.add(player);
+                                            playerMatchInfoList2.add(player);
                                         }
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             JSONObject JO = jsonArray.getJSONObject(i);
@@ -259,7 +259,7 @@ public class CoachTrainFragment extends Fragment {
                                             player.setTurnOver(0);
                                             player.setFoul(0);
                                             player.setScore(0);
-                                            PlayerHistoryMatchInfoList3.add(player);
+                                            playerMatchInfoList3.add(player);
                                         }
 
 
@@ -280,9 +280,9 @@ public class CoachTrainFragment extends Fragment {
                             Message msg = new Message();
                             msg.what=ALREADY_GET_PLAYER_LIST;
                             ArrayList<ArrayList<PlayerHistoryMatchInfo>> lists = new ArrayList<ArrayList<PlayerHistoryMatchInfo>>();
-                            lists.add(PlayerHistoryMatchInfoList1);
-                            lists.add(PlayerHistoryMatchInfoList2);
-                            lists.add(PlayerHistoryMatchInfoList3);
+                            lists.add(playerMatchInfoList1);
+                            lists.add(playerMatchInfoList2);
+                            lists.add(playerMatchInfoList3);
                             msg.obj=lists;
                             handler.sendMessage(msg);
 
@@ -299,9 +299,9 @@ public class CoachTrainFragment extends Fragment {
                     }
 
 
-                    PlayerHistoryMatchInfoList1=lists.get(0);
-                    PlayerHistoryMatchInfoList2=lists.get(1);
-                    PlayerHistoryMatchInfoList3=lists.get(2);
+                    playerMatchInfoList1=lists.get(0);
+                    playerMatchInfoList2=lists.get(1);
+                    playerMatchInfoList3=lists.get(2);
 
 
                     new Thread(new Runnable() {
@@ -326,8 +326,8 @@ public class CoachTrainFragment extends Fragment {
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             JSONObject JO = jsonArray.getJSONObject(i);
                                             int playerId=JO.getInt("playerId");
-                                            if(hasPlayerId(playerId,PlayerHistoryMatchInfoList1)){
-                                                PlayerHistoryMatchInfo player=getPlayerById(playerId,PlayerHistoryMatchInfoList1);
+                                            if(hasPlayerId(playerId,playerMatchInfoList1)){
+                                                PlayerHistoryMatchInfo player=getPlayerById(playerId,playerMatchInfoList1);
                                                 player.setPlayerName(JO.getString("playerName"));
                                                 player.setIsFirst(JO.getInt("isFirst"));
                                                 player.setTime(JO.getInt("time"));
@@ -346,7 +346,7 @@ public class CoachTrainFragment extends Fragment {
                                                 player.setTurnOver(JO.getInt("turnOver"));
                                                 player.setFoul(JO.getInt("foul"));
                                                 player.setScore(JO.getInt("score"));
-                                                PlayerHistoryMatchInfoList1.set(getIndexByPlayerId(playerId,PlayerHistoryMatchInfoList1),player);
+                                                playerMatchInfoList1.set(getIndexByPlayerId(playerId,playerMatchInfoList1),player);
                                             }
                                         }
 
@@ -367,12 +367,12 @@ public class CoachTrainFragment extends Fragment {
                                 e.printStackTrace();
                             }
 
-                            for (int i=0; i<PlayerHistoryMatchInfoList1.size();i++){
-                                System.out.println("PLAYERMATCHLIST1 "+PlayerHistoryMatchInfoList1.get(i).getTime());
+                            for (int i=0; i<playerMatchInfoList1.size();i++){
+                                System.out.println("PLAYERMATCHLIST1 "+playerMatchInfoList1.get(i).getTime());
                             }
                             Message msg = new Message();
                             msg.what=ALREADY_GET_PLAYER_MATCH_INFO_1;
-                            msg.obj=PlayerHistoryMatchInfoList1;
+                            msg.obj=playerMatchInfoList1;
                             handler.sendMessage(msg);
 
                         }
@@ -381,8 +381,8 @@ public class CoachTrainFragment extends Fragment {
 
 
                 case ALREADY_GET_PLAYER_MATCH_INFO_1:
-                    for(int i=0; i<PlayerHistoryMatchInfoList1.size(); i++){
-                        PlayerHistoryMatchInfoList1.set(i, ((ArrayList<PlayerHistoryMatchInfo>) msg.obj).get(i));
+                    for(int i=0; i<playerMatchInfoList1.size(); i++){
+                        playerMatchInfoList1.set(i, ((ArrayList<PlayerHistoryMatchInfo>) msg.obj).get(i));
                     }
                     new Thread(new Runnable() {
                         @Override
@@ -406,8 +406,8 @@ public class CoachTrainFragment extends Fragment {
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             JSONObject JO = jsonArray.getJSONObject(i);
                                             int playerId=JO.getInt("playerId");
-                                            if(hasPlayerId(playerId,PlayerHistoryMatchInfoList2)){
-                                                PlayerHistoryMatchInfo player=getPlayerById(playerId,PlayerHistoryMatchInfoList2);
+                                            if(hasPlayerId(playerId,playerMatchInfoList2)){
+                                                PlayerHistoryMatchInfo player=getPlayerById(playerId,playerMatchInfoList2);
                                                 player.setPlayerName(JO.getString("playerName"));
                                                 player.setIsFirst(JO.getInt("isFirst"));
                                                 player.setTime(JO.getInt("time"));
@@ -426,7 +426,7 @@ public class CoachTrainFragment extends Fragment {
                                                 player.setTurnOver(JO.getInt("turnOver"));
                                                 player.setFoul(JO.getInt("foul"));
                                                 player.setScore(JO.getInt("score"));
-                                                PlayerHistoryMatchInfoList2.set(getIndexByPlayerId(playerId,PlayerHistoryMatchInfoList2),player);
+                                                playerMatchInfoList2.set(getIndexByPlayerId(playerId,playerMatchInfoList2),player);
 
                                             }
                                         }
@@ -448,12 +448,12 @@ public class CoachTrainFragment extends Fragment {
                                 e.printStackTrace();
                             }
 
-                            for (int i=0; i<PlayerHistoryMatchInfoList2.size();i++){
-                                System.out.println("PLAYERMATCHLIST2 "+PlayerHistoryMatchInfoList2.get(i).getTime());
+                            for (int i=0; i<playerMatchInfoList2.size();i++){
+                                System.out.println("PLAYERMATCHLIST2 "+playerMatchInfoList2.get(i).getTime());
                             }
                             Message msg = new Message();
                             msg.what=ALREADY_GET_PLAYER_MATCH_INFO_2;
-                            msg.obj=PlayerHistoryMatchInfoList2;
+                            msg.obj=playerMatchInfoList2;
                             handler.sendMessage(msg);
 
                         }
@@ -461,8 +461,8 @@ public class CoachTrainFragment extends Fragment {
                     break;
 
                 case ALREADY_GET_PLAYER_MATCH_INFO_2:
-                    for(int i=0; i<PlayerHistoryMatchInfoList1.size(); i++){
-                        PlayerHistoryMatchInfoList2.set(i, ((ArrayList<PlayerHistoryMatchInfo>) msg.obj).get(i));
+                    for(int i=0; i<playerMatchInfoList1.size(); i++){
+                        playerMatchInfoList2.set(i, ((ArrayList<PlayerHistoryMatchInfo>) msg.obj).get(i));
                     }
 
                     new Thread(new Runnable() {
@@ -487,8 +487,8 @@ public class CoachTrainFragment extends Fragment {
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             JSONObject JO = jsonArray.getJSONObject(i);
                                             int playerId=JO.getInt("playerId");
-                                            if(hasPlayerId(playerId,PlayerHistoryMatchInfoList3)){
-                                                PlayerHistoryMatchInfo player=getPlayerById(playerId,PlayerHistoryMatchInfoList3);
+                                            if(hasPlayerId(playerId,playerMatchInfoList3)){
+                                                PlayerHistoryMatchInfo player=getPlayerById(playerId,playerMatchInfoList3);
                                                 player.setPlayerName(JO.getString("playerName"));
                                                 player.setIsFirst(JO.getInt("isFirst"));
                                                 player.setTime(JO.getInt("time"));
@@ -507,7 +507,7 @@ public class CoachTrainFragment extends Fragment {
                                                 player.setTurnOver(JO.getInt("turnOver"));
                                                 player.setFoul(JO.getInt("foul"));
                                                 player.setScore(JO.getInt("score"));
-                                                PlayerHistoryMatchInfoList3.set(getIndexByPlayerId(playerId,PlayerHistoryMatchInfoList3),player);
+                                                playerMatchInfoList3.set(getIndexByPlayerId(playerId,playerMatchInfoList3),player);
                                             }
                                         }
 
@@ -528,12 +528,12 @@ public class CoachTrainFragment extends Fragment {
                                 e.printStackTrace();
                             }
 
-                            for (int i=0; i<PlayerHistoryMatchInfoList3.size();i++){
-                                System.out.println("PLAYERMATCHLIST3 "+PlayerHistoryMatchInfoList3.get(i).getTime());
+                            for (int i=0; i<playerMatchInfoList3.size();i++){
+                                System.out.println("PLAYERMATCHLIST3 "+playerMatchInfoList3.get(i).getTime());
                             }
                             Message msg = new Message();
                             msg.what=ALREADY_GET_PLAYER_MATCH_INFO_3;
-                            msg.obj=PlayerHistoryMatchInfoList3;
+                            msg.obj=playerMatchInfoList3;
                             handler.sendMessage(msg);
 
                         }
@@ -541,16 +541,16 @@ public class CoachTrainFragment extends Fragment {
                     break;
                 //得到PlayerTrainingInfo
                 case ALREADY_GET_PLAYER_MATCH_INFO_3:
-                    PlayerHistoryMatchInfoList3 = (ArrayList<PlayerHistoryMatchInfo>) msg.obj;
-                    for(int i=0; i<PlayerHistoryMatchInfoList1.size(); i++){
-                        PlayerHistoryMatchInfoList3.set(i, ((ArrayList<PlayerHistoryMatchInfo>) msg.obj).get(i));
+                    playerMatchInfoList3 = (ArrayList<PlayerHistoryMatchInfo>) msg.obj;
+                    for(int i=0; i<playerMatchInfoList1.size(); i++){
+                        playerMatchInfoList3.set(i, ((ArrayList<PlayerHistoryMatchInfo>) msg.obj).get(i));
                     }
 
 
-                    for (int i=0; i<PlayerHistoryMatchInfoList2.size();i++){
-                        System.out.println("!!!!!!!PLAYERMATCHLIST1 "+PlayerHistoryMatchInfoList1.get(i).getTime());
-                        System.out.println("!!!!!!!PLAYERMATCHLIST2 "+PlayerHistoryMatchInfoList2.get(i).getTime());
-                        System.out.println("!!!!!!!PLAYERMATCHLIST3 "+PlayerHistoryMatchInfoList3.get(i).getTime());
+                    for (int i=0; i<playerMatchInfoList2.size();i++){
+                        System.out.println("!!!!!!!PLAYERMATCHLIST1 "+playerMatchInfoList1.get(i).getTime());
+                        System.out.println("!!!!!!!PLAYERMATCHLIST2 "+playerMatchInfoList2.get(i).getTime());
+                        System.out.println("!!!!!!!PLAYERMATCHLIST3 "+playerMatchInfoList3.get(i).getTime());
                     }
                     System.out.println("!!!!!!!MatchIdList     "+matchIdList.get(0));
 
@@ -587,18 +587,18 @@ public class CoachTrainFragment extends Fragment {
 
     private void getPlayerTrainingInfoList(){
 
-        for(int i=0;i<PlayerHistoryMatchInfoList3.size();i++){
+        for(int i=0;i<playerMatchInfoList3.size();i++){
             PlayerTrainingInfo playerTrainingInfo = new PlayerTrainingInfo();
 
-            int time = PlayerHistoryMatchInfoList3.get(i).getTime();
-            System.out.println(PlayerHistoryMatchInfoList1.get(i).getTime()+"hehe"+PlayerHistoryMatchInfoList2.get(i).getTime()+"hehe"+
-                    PlayerHistoryMatchInfoList3.get(i).getTime());
+            int time = playerMatchInfoList3.get(i).getTime();
+            System.out.println(playerMatchInfoList1.get(i).getTime()+"hehe"+playerMatchInfoList2.get(i).getTime()+"hehe"+
+                    playerMatchInfoList3.get(i).getTime());
             String state=getPlayerState(i);
 
-            playerTrainingInfo.setPlayerId(PlayerHistoryMatchInfoList1.get(i).getPlayerId());
+            playerTrainingInfo.setPlayerId(playerMatchInfoList1.get(i).getPlayerId());
             playerTrainingInfo.setMatchTime(time);
             playerTrainingInfo.setState(state);
-            playerTrainingInfo.setPlayerName(PlayerHistoryMatchInfoList1.get(i).getPlayerName());
+            playerTrainingInfo.setPlayerName(playerMatchInfoList1.get(i).getPlayerName());
             playerTrainingInfoList.add(playerTrainingInfo);
 
         }
@@ -618,21 +618,21 @@ public class CoachTrainFragment extends Fragment {
     private String getPlayerState(int i){
         String state="";
         double key[]=new double[3];
-        key[0]=((double)PlayerHistoryMatchInfoList1.get(i).getScore()+0.5*(double)PlayerHistoryMatchInfoList1.get(i).getAss()
-                +0.5*(double)PlayerHistoryMatchInfoList1.get(i).getTotReb()+0.5*(double)PlayerHistoryMatchInfoList1.get(i).getSteal()
-                +0.5*(double)PlayerHistoryMatchInfoList1.get(i).getBlockShot()-0.5*(double)PlayerHistoryMatchInfoList1.get(i).getTurnOver()
-                -(double)PlayerHistoryMatchInfoList1.get(i).getFreeThrowShot()+(double)PlayerHistoryMatchInfoList1.get(i).getFreeThrowHit())
-                /((double)PlayerHistoryMatchInfoList1.get(i).getTime()+1)*10;
-        key[1]=((double)PlayerHistoryMatchInfoList2.get(i).getScore()+0.5*(double)PlayerHistoryMatchInfoList2.get(i).getAss()
-                +0.5*(double)PlayerHistoryMatchInfoList2.get(i).getTotReb()+0.5*(double)PlayerHistoryMatchInfoList2.get(i).getSteal()
-                +0.5*(double)PlayerHistoryMatchInfoList2.get(i).getBlockShot()-0.5*(double)PlayerHistoryMatchInfoList2.get(i).getTurnOver()
-                -(double)PlayerHistoryMatchInfoList2.get(i).getFreeThrowShot()+(double)PlayerHistoryMatchInfoList2.get(i).getFreeThrowHit())
-                /((double)PlayerHistoryMatchInfoList2.get(i).getTime()+1)*10;
-        key[2]=((double)PlayerHistoryMatchInfoList3.get(i).getScore()+0.5*(double)PlayerHistoryMatchInfoList3.get(i).getAss()
-                +0.5*(double)PlayerHistoryMatchInfoList3.get(i).getTotReb()+0.5*(double)PlayerHistoryMatchInfoList3.get(i).getSteal()
-                +0.5*(double)PlayerHistoryMatchInfoList3.get(i).getBlockShot()-0.5*(double)PlayerHistoryMatchInfoList3.get(i).getTurnOver()
-                -(double)PlayerHistoryMatchInfoList3.get(i).getFreeThrowShot()+(double)PlayerHistoryMatchInfoList3.get(i).getFreeThrowHit())
-                /((double)PlayerHistoryMatchInfoList3.get(i).getTime()+1)*10;
+        key[0]=((double)playerMatchInfoList1.get(i).getScore()+0.5*(double)playerMatchInfoList1.get(i).getAss()
+                +0.5*(double)playerMatchInfoList1.get(i).getTotReb()+0.5*(double)playerMatchInfoList1.get(i).getSteal()
+                +0.5*(double)playerMatchInfoList1.get(i).getBlockShot()-0.5*(double)playerMatchInfoList1.get(i).getTurnOver()
+                -(double)playerMatchInfoList1.get(i).getFreeThrowShot()+(double)playerMatchInfoList1.get(i).getFreeThrowHit())
+                /((double)playerMatchInfoList1.get(i).getTime()+1)*10+getSuccessRate(i);
+        key[1]=((double)playerMatchInfoList2.get(i).getScore()+0.5*(double)playerMatchInfoList2.get(i).getAss()
+                +0.5*(double)playerMatchInfoList2.get(i).getTotReb()+0.5*(double)playerMatchInfoList2.get(i).getSteal()
+                +0.5*(double)playerMatchInfoList2.get(i).getBlockShot()-0.5*(double)playerMatchInfoList2.get(i).getTurnOver()
+                -(double)playerMatchInfoList2.get(i).getFreeThrowShot()+(double)playerMatchInfoList2.get(i).getFreeThrowHit())
+                /((double)playerMatchInfoList2.get(i).getTime()+1)*10;
+        key[2]=((double)playerMatchInfoList3.get(i).getScore()+0.5*(double)playerMatchInfoList3.get(i).getAss()
+                +0.5*(double)playerMatchInfoList3.get(i).getTotReb()+0.5*(double)playerMatchInfoList3.get(i).getSteal()
+                +0.5*(double)playerMatchInfoList3.get(i).getBlockShot()-0.5*(double)playerMatchInfoList3.get(i).getTurnOver()
+                -(double)playerMatchInfoList3.get(i).getFreeThrowShot()+(double)playerMatchInfoList3.get(i).getFreeThrowHit())
+                /((double)playerMatchInfoList3.get(i).getTime()+1)*10;
 
         System.out.println(key[0]+"keykeykey"+key[1]+"keykeykey"+key[2]);
 
@@ -656,10 +656,46 @@ public class CoachTrainFragment extends Fragment {
 
             }
         }
-
-
-
         return state;
+    }
+
+    private double getSuccessRate(int i){
+        double rate2 = 0;
+
+        double threeRate1 = (double)playerMatchInfoList1.get(i).getThreeHit()/((double)playerMatchInfoList1.get(i).getThreeShot()+0.001);
+        double threeRate2 = (double)playerMatchInfoList2.get(i).getThreeHit()/((double)playerMatchInfoList2.get(i).getThreeShot()+0.001);
+        double threeRate3 = (double)playerMatchInfoList3.get(i).getThreeHit()/((double)playerMatchInfoList3.get(i).getThreeShot()+0.001);
+        double twoRate1 = (double)playerMatchInfoList1.get(i).getTwoHit()/((double)playerMatchInfoList1.get(i).getTwoShot()+0.001);
+        double twoRate2 = (double)playerMatchInfoList2.get(i).getTwoHit()/((double)playerMatchInfoList2.get(i).getTwoShot()+0.001);
+        double twoRate3 = (double)playerMatchInfoList3.get(i).getTwoHit() / ((double)playerMatchInfoList3.get(i).getTwoShot()+0.001);
+
+        double k = (threeRate1+threeRate2+threeRate3)/(twoRate1+twoRate2+twoRate3);
+        double rate3=(rate2*k);
+        double resultFunction=0;
+        double resultRate=0;
+
+        for(rate2=0; rate2<=1; rate2=rate2+0.01){
+            double function=1;
+
+            for (int n=0; n<(playerMatchInfoList1.get(i).getThreeHit()+playerMatchInfoList2.get(i).getThreeHit()+playerMatchInfoList3.get(i).getThreeHit());n++){
+                function = function*rate3;
+            }
+            for(int m=0; m<(playerMatchInfoList1.get(i).getTwoHit()+playerMatchInfoList2.get(i).getTwoHit()+playerMatchInfoList3.get(i).getTwoHit());m++){
+                function = function*rate2;
+            }
+            for (int p=0; p<(playerMatchInfoList1.get(i).getThreeShot()+playerMatchInfoList2.get(i).getThreeShot()+playerMatchInfoList3.get(i).getThreeShot()+
+                    playerMatchInfoList1.get(i).getTwoShot()+playerMatchInfoList2.get(i).getTwoShot()+playerMatchInfoList3.get(i).getTwoShot()-
+                    (playerMatchInfoList1.get(i).getThreeHit()+playerMatchInfoList2.get(i).getThreeHit()+playerMatchInfoList3.get(i).getThreeHit()+
+                    playerMatchInfoList1.get(i).getTwoHit()+playerMatchInfoList2.get(i).getTwoHit()+playerMatchInfoList3.get(i).getTwoHit()));p++){
+                function = function*(1-rate2-rate3);
+            }
+            if (resultFunction<function){
+                resultFunction=function;
+                resultRate=rate2;
+            }
+        }
+        System.out.println("LLLLLLLDDDDDDDDDDDDD "+resultRate);
+        return resultRate;
     }
 
     private int getIndexByPlayerId(int playerId, ArrayList<PlayerHistoryMatchInfo> list){
