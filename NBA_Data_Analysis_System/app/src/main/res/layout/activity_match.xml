@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <!--Toolbar-->
+    <include layout="@layout/custom_toolbar"/>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- TODO: Update blank fragment layout -->
+            <HorizontalScrollView
+                android:id="@+id/HSV_for_match1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+            <RelativeLayout
+                android:id="@+id/match_card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/card"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin">
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/match_t1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="100dip"
+                        android:layout_height="30dp"
+                        android:text="球队"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="80dip"
+                        android:layout_height="30dp"
+                        android:text="主场"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="得分"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="2分"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="3分"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="篮板"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="助攻"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="抢断"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="盖帽"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="失误"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="犯规"
+                        android:textSize="@dimen/playerSize" />
+
+                </LinearLayout>
+
+                <com.sora.projectn.utils.MyListView
+                    android:id="@+id/match_pts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/match_t1">
+
+                </com.sora.projectn.utils.MyListView>
+            </RelativeLayout>
+            </HorizontalScrollView>
+                <TextView
+                    android:id="@+id/match_t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="主队"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:layout_below="@id/HSV_for_match1"
+                    android:textSize="@dimen/titleSize"/>
+                <HorizontalScrollView
+                    android:id="@+id/HSV_for_match2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/match_t2"
+                    android:scrollbars="none">
+                    <RelativeLayout
+                        android:id="@+id/match_card2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/card"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin">
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/match_title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="180dip"
+                        android:layout_height="30dp"
+                        android:text="球员"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="得分"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                       android:layout_width="60dip"
+                       android:layout_height="30dp"
+                        android:text="2分"
+                       android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="3分"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="篮板"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="助攻"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="抢断"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="盖帽"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="失误"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="犯规"
+                        android:textSize="@dimen/playerSize" />
+
+                </LinearLayout>
+
+                <com.sora.projectn.utils.MyListView
+                    android:id="@+id/match_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/match_title2">
+
+                </com.sora.projectn.utils.MyListView>
+                    </RelativeLayout>
+                </HorizontalScrollView>
+                <TextView
+                    android:id="@+id/match_t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="客队"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:layout_below="@id/HSV_for_match2"
+                    android:textSize="@dimen/titleSize"/>
+                <HorizontalScrollView
+                    android:id="@+id/HSV_for_match3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/match_t3"
+                    android:scrollbars="none">
+                    <RelativeLayout
+                        android:id="@+id/match_card3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/card"
+                        android:layout_marginBottom="@dimen/activity_vertical_margin"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin">
+                <LinearLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/match_title3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="180dip"
+                        android:layout_height="30dp"
+                        android:text="球员"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="得分"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="2分"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="3分"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="篮板"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="助攻"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="抢断"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="盖帽"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="失误"
+                        android:textSize="@dimen/playerSize" />
+
+                    <TextView
+                        android:layout_width="60dip"
+                        android:layout_height="30dp"
+                        android:text="犯规"
+                        android:textSize="@dimen/playerSize" />
+                </LinearLayout>
+
+                    <com.sora.projectn.utils.MyListView
+                       android:id="@+id/match_3"
+                        android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_below="@id/match_title3">
+
+                   </com.sora.projectn.utils.MyListView>
+                    </RelativeLayout>
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

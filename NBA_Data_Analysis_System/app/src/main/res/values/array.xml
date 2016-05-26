@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinnerName">
+        <item>isFirst</item>
+        <item>time</item>
+        <item>twoHit</item>
+        <item>twoShot</item>
+        <item>threeHit</item>
+        <item>threeShot</item>
+        <item>freeThrowHit</item>
+        <item>freeThrowShot</item>
+        <item>offReb</item>
+        <item>defReb</item>
+        <item>totReb</item>
+        <item>ass</item>
+        <item>steal</item>
+        <item>blockShot</item>
+        <item>turnOver</item>
+        <item>foul</item>
+        <item>score</item>
+        <item>twoRate</item>
+        <item>threeRate</item>
+        <item>freeThrowRate</item>
+        <item>trueRate</item>
+        <item>doubleDouble</item>
+        <item>tripleDouble</item>
+        <item>per</item>
+    </string-array>
+
+</resources>

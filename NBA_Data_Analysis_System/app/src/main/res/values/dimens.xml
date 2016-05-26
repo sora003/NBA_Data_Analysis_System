@@ -1,0 +1,43 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="twice_activity_horizontal_margin">32dp</dimen>
+    <dimen name="twice_activity_vertical_margin">32dp</dimen>
+    <dimen name="forth_activity_horizontal_margin">64dp</dimen>
+    <dimen name="forth_activity_vertical_margin">64dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="conSize">20sp</dimen>
+    <dimen name="teamPadding">12dp</dimen>
+    <dimen name="conference_horizontal_margin">10dp</dimen>
+    <dimen name="team_horizontal_margin">10dp</dimen>
+    <dimen name="teamSize">20sp</dimen>
+    <dimen name="conference_vertical_margin">5dp</dimen>
+    <dimen name="teamLogo_maxWidth">50dp</dimen>
+    <dimen name="titleSize">25sp</dimen>
+    <dimen name="playerSize">20sp</dimen>
+    <dimen name="rankSize">20sp</dimen>
+
+    <!--activity_team-->
+    <!--球队Logo占用的最大宽度-->
+    <dimen name="teamLogo_maxWidthForInfo">80dp</dimen>
+    <!--球队基本信息字号-->
+    <dimen name="teamInfoSize">14sp</dimen>
+    <!--球队名字字号-->
+    <dimen name="teamTitleSize">22sp</dimen>
+    <!--球队基本信息间的距离-->
+    <dimen name="teamInfo_vertical_margin">5dp</dimen>
+    <dimen name="teamInfo_horizontal_margin">10dp</dimen>
+    <dimen name="teamGuideSize">18sp</dimen>
+    <dimen name="guide_vertical_margin">5dp</dimen>
+    <dimen name="content_horizontal_margin">10dp</dimen>
+    <dimen name="item_teamSeasonSize">16sp</dimen>
+    <dimen name="teamdata_vertical_margin">10dp</dimen>
+    <dimen name="text_margin">10dp</dimen>
+    <dimen name="teamDataSize">18sp</dimen>
+    <dimen name="teamPlayerSize">18sp</dimen>
+    <dimen name="teamStaticsSize">18sp</dimen>
+    <dimen name="content_vertical_margin">10dp</dimen>
+    <dimen name="conferenceSize">20sp</dimen>
+
+</resources>

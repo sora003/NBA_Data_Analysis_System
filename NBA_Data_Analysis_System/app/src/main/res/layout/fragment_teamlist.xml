@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:background="@color/card"
+               android:layout_marginTop="@dimen/activity_vertical_margin"
+               android:layout_marginBottom="@dimen/activity_vertical_margin"
+               android:layout_marginLeft="@dimen/activity_horizontal_margin"
+               android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+               <TextView
+                   android:id="@+id/tv_con01"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/hint"
+                   android:textSize="@dimen/conSize"
+                   android:paddingTop="@dimen/content_vertical_margin"
+                   android:paddingBottom="@dimen/content_vertical_margin"
+                   android:paddingLeft="@dimen/twice_activity_horizontal_margin"
+                   android:paddingRight="@dimen/content_horizontal_margin"/>
+
+               <com.sora.projectn.utils.MyListView
+                   android:id="@+id/lv_con01"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+
+               </com.sora.projectn.utils.MyListView>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:background="@color/card"
+               android:layout_marginTop="@dimen/activity_vertical_margin"
+               android:layout_marginBottom="@dimen/activity_vertical_margin"
+               android:layout_marginLeft="@dimen/activity_horizontal_margin"
+               android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+               <TextView
+                   android:id="@+id/tv_con02"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/hint"
+                   android:textSize="@dimen/conSize"
+                   android:paddingTop="@dimen/content_vertical_margin"
+                   android:paddingBottom="@dimen/content_vertical_margin"
+                   android:paddingLeft="@dimen/twice_activity_horizontal_margin"
+                   android:paddingRight="@dimen/content_horizontal_margin"/>
+
+               <com.sora.projectn.utils.MyListView
+                   android:id="@+id/lv_con02"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+
+               </com.sora.projectn.utils.MyListView>
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:background="@color/card"
+               android:layout_marginTop="@dimen/activity_vertical_margin"
+               android:layout_marginBottom="@dimen/activity_vertical_margin"
+               android:layout_marginLeft="@dimen/activity_horizontal_margin"
+               android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+               <TextView
+                   android:id="@+id/tv_con03"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/hint"
+                   android:textSize="@dimen/conSize"
+                   android:paddingTop="@dimen/content_vertical_margin"
+                   android:paddingBottom="@dimen/content_vertical_margin"
+                   android:paddingLeft="@dimen/twice_activity_horizontal_margin"
+                   android:paddingRight="@dimen/content_horizontal_margin"/>
+
+               <com.sora.projectn.utils.MyListView
+                   android:id="@+id/lv_con03"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+
+               </com.sora.projectn.utils.MyListView>
+
+           </LinearLayout>
+
+
+       </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

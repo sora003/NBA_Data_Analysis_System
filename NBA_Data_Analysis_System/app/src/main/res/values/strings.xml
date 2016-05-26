@@ -1,0 +1,115 @@
+<resources>
+    <string name="app_name">ProjectN</string>
+    <string name="action_settings">Settings</string>
+    <string name="open">data</string>
+    <string name="close">data</string>
+
+    <!--old_activity_teamlist-->
+    <string name="text_westConference">西部球队</string>
+    <string name="text_eastConference">东部球队</string>
+    <string name="text_sw">西南区</string>
+    <string name="text_wC1T1"> </string>
+    <string name="text_wC1T2"> </string>
+    <string name="text_wC1T3"> </string>
+    <string name="text_wC1T4"> </string>
+    <string name="text_wC1T5"> </string>
+    <string name="text_eC1">东南区</string>
+    <string name="text_eC1T1"> </string>
+    <string name="text_eC1T2"> </string>
+    <string name="text_eC1T3"> </string>
+    <string name="text_eC1T4"> </string>
+    <string name="text_eC1T5"> </string>
+    <string name="text_wC2">太平洋区</string>
+    <string name="text_wC2T1"> </string>
+    <string name="text_wC2T2"> </string>
+    <string name="text_wC2T3"> </string>
+    <string name="text_wC2T4"> </string>
+    <string name="text_wC2T5"> </string>
+    <string name="text_eC2">中部区</string>
+    <string name="text_eC2T1"> </string>
+    <string name="text_eC2T2"> </string>
+    <string name="text_eC2T3"> </string>
+    <string name="text_eC2T4"> </string>
+    <string name="text_eC2T5"> </string>
+    <string name="text_wC3">西北区</string>
+    <string name="text_wC3T1"> </string>
+    <string name="text_wC3T2"> </string>
+    <string name="text_wC3T3"> </string>
+    <string name="text_wC3T4"> </string>
+    <string name="text_wC3T5"> </string>
+    <string name="text_eC3">大西洋区</string>
+    <string name="text_eC3T1"> </string>
+    <string name="text_eC3T2"> </string>
+    <string name="text_eC3T3"> </string>
+    <string name="text_eC3T4"> </string>
+    <string name="text_eC3T5"> </string>
+    <string name="text_teamName"> </string>
+    <string name="text_season"> </string>
+    <string name="text_winlose"> </string>
+    <string name="text_rank"> </string>
+    <string name="text_teamGuide1">资料</string>
+    <string name="text_teamGuide2">数据</string>
+    <string name="text_teamGuide3">阵容</string>
+    <string name="text_teamGuide4">赛程</string>
+    <string name="text_east_rank">东部排行</string>
+    <string name="text_west_rank">西部排行</string>
+    <string name="text_rankGuide2">联盟排行</string>
+    <string name="text_rankGuide3">赛季数据王</string>
+    <string name="text_rankGuide4">今日数据王</string>
+    <string name="text_fragment_teamseason">本赛季场均数据统计</string>
+    <string name="text_league">West Conference</string>
+    <string name="text_Keys">筛选条件：</string>
+    <string name="text_playerLeague">赛区:</string>
+    <string name="text_playerPosition">位置:</string>
+    <string name="text_playerKey">数据项:</string>
+    <string name="text_playerAge">年龄:</string>
+    <string name="hint">Waiting...</string>
+
+
+    <!--Test For old_activity_teamlist-->
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome_text">请设置您的角色:</string>
+    <string name="character_01">球迷</string>
+    <string name="character_02">教练</string>
+    <string name="character_03">球探</string>
+    <!--Test For activity_teamlist_old-->
+    <!--<string name="text_wC1T1">小牛</string>-->
+    <!--<string name="text_wC1T2">火箭</string>-->
+    <!--<string name="text_wC1T3">灰熊</string>-->
+    <!--<string name="text_wC1T4">鹈鹕</string>-->
+    <!--<string name="text_wC1T5">马刺</string>-->
+    <!--<string name="text_eC1T1">老鹰</string>-->
+    <!--<string name="text_eC1T2">黄蜂</string>-->
+    <!--<string name="text_eC1T3">热火</string>-->
+    <!--<string name="text_eC1T4">魔术</string>-->
+    <!--<string name="text_eC1T5">奇才</string>-->
+    <!--<string name="text_wC2T1">勇士</string>-->
+    <!--<string name="text_wC2T2">快船</string>-->
+    <!--<string name="text_wC2T3">湖人</string>-->
+    <!--<string name="text_wC2T4">太阳</string>-->
+    <!--<string name="text_wC2T5">国王</string>-->
+    <!--<string name="text_eC2T1">公牛</string>-->
+    <!--<string name="text_eC2T2">骑士</string>-->
+    <!--<string name="text_eC2T3">活塞</string>-->
+    <!--<string name="text_eC2T4">步行者</string>-->
+    <!--<string name="text_eC2T5">雄鹿</string>-->
+    <!--<string name="text_wC3T1">掘金</string>-->
+    <!--<string name="text_wC3T2">森林狼</string>-->
+    <!--<string name="text_wC3T3">雷霆</string>-->
+    <!--<string name="text_wC3T4">开拓者</string>-->
+    <!--<string name="text_wC3T5">爵士</string>-->
+    <!--<string name="text_eC3T1">凯尔特人</string>-->
+    <!--<string name="text_eC3T2">篮网</string>-->
+    <!--<string name="text_eC3T3">尼克斯</string>-->
+    <!--<string name="text_eC3T4">76人</string>-->
+    <!--<string name="text_eC3T5">猛龙</string>-->
+
+    <!--Test For activity_team-->
+    <!--<string name="text_teamName">Los Angeles Lakers</string>-->
+    <!--<string name="text_season">2015-2016赛季</string>-->
+    <!--<string name="text_winlose">9胜37负</string>-->
+    <!--<string name="text_rank">联盟第29名</string>-->
+
+</resources>

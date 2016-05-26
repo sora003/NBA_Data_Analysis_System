@@ -1,0 +1,1088 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_DBlue"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context = ".model.Activity.TeamListActivity_Old">
+
+
+    <!--Toolbar-->
+    <include layout="@layout/custom_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--西部球队   Western Conference-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!--西部球队   Western Conference-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_DBlue"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_westernLogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/western_logo"
+                        android:layout_alignTop="@+id/tv_westConference"
+                        android:layout_alignBottom="@+id/tv_westConference"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                    <TextView
+                        android:id="@+id/tv_westConference"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_westConference"
+                        android:textSize="20sp"
+                        android:textColor="@color/color_white"
+                        android:layout_toRightOf="@+id/iv_westernLogo"
+                        android:paddingLeft="10dp"/>
+
+                </RelativeLayout>
+
+
+                <!--西南分区   Southwest-->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_wC1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_sw"
+                        android:background="@color/color_DDBlue"
+                        android:textColor="@color/conferenceColor"
+                        android:textSize="@dimen/conferenceSize"
+                        android:paddingLeft="@dimen/conference_horizontal_margin"
+                        android:paddingTop="@dimen/conference_vertical_margin"
+                        android:paddingBottom="@dimen/conference_vertical_margin"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_wC1"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/team_horizontal_margin">
+
+                        <RelativeLayout
+                            android:id="@+id/wC1T1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_wC1T1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_wC1T1"
+                                android:layout_alignBottom="@+id/tv_wC1T1"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_wC1T1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_wC1T1"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_wC1T1"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/wC1T2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_wC1T2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_wC1T2"
+                                android:layout_alignBottom="@+id/tv_wC1T2"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_wC1T2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_wC1T2"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_wC1T2"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/wC1T3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_wC1T3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_wC1T3"
+                                android:layout_alignBottom="@+id/tv_wC1T3"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_wC1T3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_wC1T3"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_wC1T3"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/wC1T4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_wC1T4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_wC1T4"
+                                android:layout_alignBottom="@+id/tv_wC1T4"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_wC1T4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_wC1T4"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_wC1T4"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/wC1T5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_wC1T5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_wC1T5"
+                                android:layout_alignBottom="@+id/tv_wC1T5"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_wC1T5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_wC1T5"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_wC1T5"/>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!--太平洋分区   Pacific-->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/conference_vertical_margin">
+
+                    <TextView
+                        android:id="@+id/tv_wC2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_wC2"
+                        android:background="@color/color_DDBlue"
+                        android:textColor="@color/conferenceColor"
+                        android:textSize="@dimen/conferenceSize"
+                        android:paddingLeft="@dimen/conference_horizontal_margin"
+                        android:paddingTop="@dimen/conference_vertical_margin"
+                        android:paddingBottom="@dimen/conference_vertical_margin"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_wC2"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/team_horizontal_margin">
+
+                        <RelativeLayout
+                            android:id="@+id/wC2T1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_wC2T1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_wC2T1"
+                                android:layout_alignBottom="@+id/tv_wC2T1"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_wC2T1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_wC2T1"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_wC2T1"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/wC2T2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_wC2T2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_wC2T2"
+                                android:layout_alignBottom="@+id/tv_wC2T2"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_wC2T2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_wC2T2"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_wC2T2"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/wC2T3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_wC2T3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_wC2T3"
+                                android:layout_alignBottom="@+id/tv_wC2T3"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_wC2T3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_wC2T3"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_wC2T3"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/wC2T4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_wC2T4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_wC2T4"
+                                android:layout_alignBottom="@+id/tv_wC2T4"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_wC2T4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_wC2T4"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_wC2T4"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/wC2T5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_wC2T5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_wC2T5"
+                                android:layout_alignBottom="@+id/tv_wC2T5"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_wC2T5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_wC2T5"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_wC2T5"/>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!--西北分区   Northwest-->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/conference_vertical_margin">
+
+                    <TextView
+                        android:id="@+id/tv_wC3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_wC3"
+                        android:background="@color/color_DDBlue"
+                        android:textColor="@color/conferenceColor"
+                        android:textSize="@dimen/conferenceSize"
+                        android:paddingLeft="@dimen/conference_horizontal_margin"
+                        android:paddingTop="@dimen/conference_vertical_margin"
+                        android:paddingBottom="@dimen/conference_vertical_margin"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_wC3"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/team_horizontal_margin">
+
+                        <RelativeLayout
+                            android:id="@+id/wC3T1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_wC3T1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_wC3T1"
+                                android:layout_alignBottom="@+id/tv_wC3T1"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_wC3T1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_wC3T1"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_wC3T1"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/wC3T2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_wC3T2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_wC3T2"
+                                android:layout_alignBottom="@+id/tv_wC3T2"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_wC3T2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_wC3T2"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_wC3T2"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/wC3T3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_wC3T3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_wC3T3"
+                                android:layout_alignBottom="@+id/tv_wC3T3"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_wC3T3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_wC3T3"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_wC3T3"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/wC3T4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_wC3T4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_wC3T4"
+                                android:layout_alignBottom="@+id/tv_wC3T4"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_wC3T4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_wC3T4"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_wC3T4"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/wC3T5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_wC3T5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_wC3T5"
+                                android:layout_alignBottom="@+id/tv_wC3T5"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_wC3T5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_wC3T5"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_wC3T5"/>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:background="@color/color_DDBlue"/>
+
+
+
+            <!--东西部球队对称显示-->
+            <!--东部球队   Eastern Conference-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <!--东部球队   Eastern Conference-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_DBlue"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:paddingLeft="10dp">
+
+                    <ImageView
+                        android:id="@+id/iv_easternLogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/eastern_logo"
+                        android:layout_alignTop="@+id/tv_eastConference"
+                        android:layout_alignBottom="@+id/tv_eastConference"
+                        android:adjustViewBounds="true"
+                        android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                    <TextView
+                        android:id="@+id/tv_eastConference"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_eastConference"
+                        android:textSize="20sp"
+                        android:textColor="@color/color_white"
+                        android:layout_toRightOf="@+id/iv_easternLogo"
+                        android:paddingLeft="10dp"/>
+
+                </RelativeLayout>
+
+                <!--东南分区   Southeast -->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_eC1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_eC1"
+                        android:background="@color/color_DDBlue"
+                        android:textColor="@color/conferenceColor"
+                        android:textSize="@dimen/conferenceSize"
+                        android:paddingLeft="@dimen/conference_horizontal_margin"
+                        android:paddingTop="@dimen/conference_vertical_margin"
+                        android:paddingBottom="@dimen/conference_vertical_margin"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_eC1"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/team_horizontal_margin">
+
+                        <RelativeLayout
+                            android:id="@+id/eC1T1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_eC1T1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_eC1T1"
+                                android:layout_alignBottom="@+id/tv_eC1T1"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_eC1T1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_eC1T1"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_eC1T1"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/eC1T2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_eC1T2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_eC1T2"
+                                android:layout_alignBottom="@+id/tv_eC1T2"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_eC1T2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_eC1T2"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_eC1T2"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/eC1T3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_eC1T3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_eC1T3"
+                                android:layout_alignBottom="@+id/tv_eC1T3"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_eC1T3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_eC1T3"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_eC1T3"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/eC1T4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_eC1T4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_eC1T4"
+                                android:layout_alignBottom="@+id/tv_eC1T4"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_eC1T4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_eC1T4"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_eC1T4"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/eC1T5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_eC1T5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_eC1T5"
+                                android:layout_alignBottom="@+id/tv_eC1T5"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_eC1T5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_eC1T5"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_eC1T5"/>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!--中央分区   Central -->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/conference_vertical_margin">
+
+                    <TextView
+                        android:id="@+id/tv_eC2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_eC2"
+                        android:background="@color/color_DDBlue"
+                        android:textColor="@color/conferenceColor"
+                        android:textSize="@dimen/conferenceSize"
+                        android:paddingLeft="@dimen/conference_horizontal_margin"
+                        android:paddingTop="@dimen/conference_vertical_margin"
+                        android:paddingBottom="@dimen/conference_vertical_margin"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_eC2"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/team_horizontal_margin">
+
+                        <RelativeLayout
+                            android:id="@+id/eC2T1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_eC2T1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_eC2T1"
+                                android:layout_alignBottom="@+id/tv_eC2T1"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_eC2T1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_eC2T1"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_eC2T1"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/eC2T2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_eC2T2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_eC2T2"
+                                android:layout_alignBottom="@+id/tv_eC2T2"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_eC2T2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_eC2T2"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_eC2T2"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/eC2T3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_eC2T3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_eC2T3"
+                                android:layout_alignBottom="@+id/tv_eC2T3"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_eC2T3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_eC2T3"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_eC2T3"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/eC2T4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_eC2T4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_eC2T4"
+                                android:layout_alignBottom="@+id/tv_eC2T4"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_eC2T4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_eC2T4"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_eC2T4"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/eC2T5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_eC2T5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_eC2T5"
+                                android:layout_alignBottom="@+id/tv_eC2T5"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_eC2T5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_eC2T5"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_eC2T5"/>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!--大西洋分区   Atlantic -->
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/conference_vertical_margin">
+
+                    <TextView
+                        android:id="@+id/tv_eC3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_eC3"
+                        android:background="@color/color_DDBlue"
+                        android:textColor="@color/conferenceColor"
+                        android:textSize="@dimen/conferenceSize"
+                        android:paddingLeft="@dimen/conference_horizontal_margin"
+                        android:paddingTop="@dimen/conference_vertical_margin"
+                        android:paddingBottom="@dimen/conference_vertical_margin"/>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_eC3"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/team_horizontal_margin">
+
+                        <RelativeLayout
+                            android:id="@+id/eC3T1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_eC3T1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_eC3T1"
+                                android:layout_alignBottom="@+id/tv_eC3T1"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_eC3T1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_eC3T1"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_eC3T1"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/eC3T2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_eC3T2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_eC3T2"
+                                android:layout_alignBottom="@+id/tv_eC3T2"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_eC3T2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_eC3T2"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_eC3T2"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/eC3T3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_eC3T3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_eC3T3"
+                                android:layout_alignBottom="@+id/tv_eC3T3"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_eC3T3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_eC3T3"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_eC3T3"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/eC3T4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_eC3T4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_eC3T4"
+                                android:layout_alignBottom="@+id/tv_eC3T4"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_eC3T4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_eC3T4"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_eC3T4"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/eC3T5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/teamPadding">
+
+                            <ImageView
+                                android:id="@+id/iv_eC3T5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignTop="@+id/tv_eC3T5"
+                                android:layout_alignBottom="@+id/tv_eC3T5"
+                                android:adjustViewBounds="true"
+                                android:maxWidth="@dimen/teamLogo_maxWidth" />
+
+                            <TextView
+                                android:id="@+id/tv_eC3T5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/text_eC3T5"
+                                android:textSize="@dimen/teamSize"
+                                android:textColor="@color/teamColor"
+                                android:layout_toRightOf="@+id/iv_eC3T5"/>
+
+                        </RelativeLayout>
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

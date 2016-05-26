@@ -1,0 +1,246 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:background="@color/background"
+        android:layout_height="wrap_content">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="com.sora.projectn.model.Fragment.PlayerRankFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/playerrank_card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/card"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+    <TextView
+        android:id="@+id/playerrank_title1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="得分"
+        android:paddingTop="@dimen/content_vertical_margin"
+        android:paddingBottom="@dimen/content_vertical_margin"
+        android:paddingLeft="@dimen/twice_activity_horizontal_margin"
+        android:paddingRight="@dimen/content_horizontal_margin"
+        android:textSize="@dimen/titleSize"/>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/playerrank_t1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playerrank_title1"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="140dip"
+            android:layout_height="30dp"
+            android:text="球员"
+            android:textSize="@dimen/playerSize" />
+
+        <TextView
+            android:layout_width="95dip"
+            android:layout_height="30dp"
+            android:text="所属球队"
+            android:textSize="@dimen/playerSize" />
+
+        <TextView
+            android:layout_width="80dip"
+            android:layout_height="30dp"
+            android:text="数据"
+            android:textSize="@dimen/playerSize" />
+
+    </LinearLayout>
+    <com.sora.projectn.utils.MyListView
+        android:id="@+id/player_rank_pts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playerrank_t1">
+
+    </com.sora.projectn.utils.MyListView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/playerrank_card2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/card"
+        android:layout_below="@id/playerrank_card1"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+    <TextView
+        android:id="@+id/playerrank_t2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="篮板"
+        android:paddingTop="@dimen/content_vertical_margin"
+        android:paddingBottom="@dimen/content_vertical_margin"
+        android:paddingLeft="@dimen/twice_activity_horizontal_margin"
+        android:paddingRight="@dimen/content_horizontal_margin"
+        android:textSize="@dimen/titleSize"/>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/playerrank_title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playerrank_t2"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="140dip"
+            android:layout_height="30dp"
+            android:text="球员"
+            android:textSize="@dimen/playerSize" />
+
+        <TextView
+            android:layout_width="95dip"
+            android:layout_height="30dp"
+            android:text="所属球队"
+            android:textSize="@dimen/playerSize" />
+
+        <TextView
+            android:layout_width="80dip"
+            android:layout_height="30dp"
+            android:text="数据"
+            android:textSize="@dimen/playerSize" />
+
+    </LinearLayout>
+    <com.sora.projectn.utils.MyListView
+        android:id="@+id/player_rank_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playerrank_title2">
+
+    </com.sora.projectn.utils.MyListView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/playerrank_card3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/card"
+        android:layout_below="@id/playerrank_card2"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+    <TextView
+        android:id="@+id/playerrank_t3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="助攻"
+        android:paddingTop="@dimen/content_vertical_margin"
+        android:paddingBottom="@dimen/content_vertical_margin"
+        android:paddingLeft="@dimen/twice_activity_horizontal_margin"
+        android:paddingRight="@dimen/content_horizontal_margin"
+        android:textSize="@dimen/titleSize"/>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/playerrank_title3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playerrank_t3"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="140dip"
+            android:layout_height="30dp"
+            android:text="球员"
+            android:textSize="@dimen/playerSize" />
+
+        <TextView
+            android:layout_width="95dip"
+            android:layout_height="30dp"
+            android:text="所属球队"
+            android:textSize="@dimen/playerSize" />
+
+        <TextView
+            android:layout_width="80dip"
+            android:layout_height="30dp"
+            android:text="数据"
+            android:textSize="@dimen/playerSize" />
+    </LinearLayout>
+    <com.sora.projectn.utils.MyListView
+        android:id="@+id/player_rank_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playerrank_title3">
+
+    </com.sora.projectn.utils.MyListView>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/playerrank_card4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/card"
+        android:layout_below="@id/playerrank_card3"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+    <TextView
+        android:id="@+id/playerrank_t4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="抢断"
+        android:paddingTop="@dimen/content_vertical_margin"
+        android:paddingBottom="@dimen/content_vertical_margin"
+        android:paddingLeft="@dimen/twice_activity_horizontal_margin"
+        android:paddingRight="@dimen/content_horizontal_margin"
+        android:textSize="@dimen/titleSize"/>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/playerrank_title4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playerrank_t4"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="140dip"
+            android:layout_height="30dp"
+            android:text="球员"
+            android:textSize="@dimen/playerSize" />
+
+        <TextView
+            android:layout_width="95dip"
+            android:layout_height="30dp"
+            android:text="所属球队"
+            android:textSize="@dimen/playerSize" />
+
+        <TextView
+            android:layout_width="80dip"
+            android:layout_height="30dp"
+            android:text="数据"
+            android:textSize="@dimen/playerSize" />
+
+    </LinearLayout>
+    <com.sora.projectn.utils.MyListView
+        android:id="@+id/player_rank_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/playerrank_title4">
+
+    </com.sora.projectn.utils.MyListView>
+    </LinearLayout>
+
+</RelativeLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+
+
+    <!--Toolbar-->
+    <include layout="@layout/custom_toolbar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--导航栏-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/guide_vertical_margin"
+            android:paddingBottom="@dimen/guide_vertical_margin">
+
+            <TextView
+                android:id="@+id/tv_westConference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/text_westConference"
+                android:textSize="@dimen/teamGuideSize"
+                android:textColor="@color/text_white"
+                android:alpha="0.5"/>
+
+            <TextView
+                android:id="@+id/tv_eastConference"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="@string/text_eastConference"
+                android:textSize="@dimen/teamGuideSize"
+                android:textColor="@color/text_white"
+                android:alpha="0.5"/>
+
+            </LinearLayout>
+
+
+            <!--滑块-->
+            <ImageView
+                android:id="@+id/iv_teamListCursor"
+                android:layout_width="9dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/guide_vertical_margin"
+                android:src="@color/color_white"
+                android:scaleType="matrix">
+
+            </ImageView>
+
+            <!--ViewPager-->
+            <include layout="@layout/myviewpager"/>
+
+
+
+        </LinearLayout>
+
+
+
+</LinearLayout>

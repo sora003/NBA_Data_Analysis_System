@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="card">#d9e1e8</color>
+    <color name="background">#9baec8</color>
+    <color name="colorPrimary">#2b90d9</color>
+    <color name="text">#282c37</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="Indigo_colorPrimaryDark">#303f9f</color>
+    <color name="Indigo_colorPrimary">#3f51b5</color>
+    <color name="Indigo_nav_color">#4675FF</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_black">#000000</color>
+    <color name="color_grey">#696969</color>
+    <color name="color_LBlue">#a4b5f4</color>
+    <color name="teamColor">#9e9d9d</color>
+    <color name="color_LLBlue">#ccdbfc</color>
+    <color name="color_DBlue">#1f202b</color>
+    <color name="color_DWhite">#b3b3b3</color>
+    <color name="color_DDBlue">#05081e</color>
+    <color name="color_LLGrey">#eeeeee</color>
+    <color name="color_DDGrey">#888888</color>
+    <color name="conferenceColor">#696969</color>
+    <color name="color_viewpager">#333896</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="bg">#ffffff</color>
+    <color name="red">#ff0000</color>
+
+</resources>

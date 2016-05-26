@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/dayrank_card1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/card"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+        <TextView
+            android:id="@+id/latestmatch_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4月11日"
+            android:paddingTop="@dimen/content_vertical_margin"
+            android:paddingBottom="@dimen/content_vertical_margin"
+            android:paddingLeft="@dimen/twice_activity_horizontal_margin"
+            android:paddingRight="@dimen/content_horizontal_margin"
+            android:textSize="@dimen/titleSize"/>
+
+        <com.sora.projectn.utils.MyListView
+            android:id="@+id/latestmatch_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/latestmatch_date">
+
+        </com.sora.projectn.utils.MyListView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_LLBlue">
+
+    <!--设置周日作为每周的第一天-->
+    <!--设置一个月显示5周-->
+    <!--layout_height要设置成match_parent   如果设置成wrap_content  会出现加载过慢的问题 需要等待2-5秒-->
+    <!--<CalendarView-->
+        <!--android:id="@+id/cv"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:firstDayOfWeek="1"-->
+        <!--android:shownWeekCount="5"-->
+        <!--android:selectedWeekBackgroundColor="#aff"-->
+        <!--android:focusedMonthDateColor="#f00"-->
+        <!--android:weekSeparatorLineColor="#ff0"-->
+        <!--android:unfocusedMonthDateColor="#f9f">-->
+
+    <!--</CalendarView>-->
+
+    <!--Toolbar-->
+    <include layout="@layout/custom_toolbar"/>
+
+    <DatePicker
+        android:id="@+id/dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </DatePicker>
+
+
+    <ListView
+        android:id="@+id/lv_matchlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+    </ListView>
+
+</LinearLayout>

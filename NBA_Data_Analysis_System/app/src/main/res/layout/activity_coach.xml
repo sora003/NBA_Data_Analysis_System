@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.sora.projectn.model.Activity.CoachActivity">
+
+    <include layout="@layout/custom_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:orientation="horizontal">
+
+            <!--球队logo-->
+            <ImageView
+                android:id="@+id/iv_teamLogo_Coach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:maxWidth="@dimen/teamLogo_maxWidthForInfo"
+                android:layout_alignTop="@+id/teamInfo_layout"
+                android:layout_alignBottom="@+id/teamInfo_layout"/>
+
+            <LinearLayout
+                android:id="@+id/teamInfo_layout_Coach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/iv_teamLogo"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin">
+
+                <!--球队名字-->
+                <TextView
+                    android:id="@+id/tv_teamName_Coach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/teamTitleSize"/>
+
+                <!--赛季年份-->
+                <TextView
+                    android:id="@+id/tv_season_Coach"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/teamInfoSize"
+                    android:layout_marginTop="@dimen/teamInfo_vertical_margin"
+                    android:layout_marginLeft="@dimen/team_horizontal_margin"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/teamInfo_vertical_margin"
+                    android:layout_marginLeft="@dimen/team_horizontal_margin">
+
+                    <!--胜负场数-->
+                    <TextView
+                        android:id="@+id/tv_winlose_Coach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/teamInfoSize"/>
+
+                    <!--球队在联盟中的排名-->
+                    <TextView
+                        android:id="@+id/tv_rank_Coach"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/teamInfoSize"
+                        android:layout_marginLeft="20dp"/>
+
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_combat_history"
+                    android:text="查看交锋数据>>>"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/teamInfoSize"
+                    android:layout_marginLeft="12dp"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--宽5dp的空白区域 UI优化需要-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp">
+
+        </View>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--导航栏-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/guide_vertical_margin">
+
+            <TextView
+                android:id="@+id/tv_teamGuide1_Coach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text=" 训  练 "
+                android:textSize="15sp"
+                android:textColor="@color/text_white"
+                android:alpha="0.5"/>
+
+
+            <TextView
+                android:id="@+id/tv_teamGuide2_Coach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="最后三分"
+                android:textSize="15sp"
+                android:textColor="@color/text_white"
+                android:alpha="0.5" />
+
+            <TextView
+                android:id="@+id/tv_teamGuide3_Coach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="最后两分"
+                android:textSize="15sp"
+                android:textColor="@color/text_white"
+                android:alpha="0.5"/>
+
+            <TextView
+                android:id="@+id/tv_teamGuide4_Coach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="最后罚球"
+                android:textSize="15sp"
+                android:textColor="@color/text_white"
+                android:alpha="0.5"/>
+
+
+        </LinearLayout>
+
+
+        <!--滑块-->
+        <ImageView
+            android:id="@+id/iv_teamCursor_Coach"
+            android:layout_width="9dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/guide_vertical_margin"
+            android:src="@color/color_white"
+            android:scaleType="matrix">
+
+        </ImageView>
+
+        <!--ViewPager-->
+        <include layout="@layout/myviewpager"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

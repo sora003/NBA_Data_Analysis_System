@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="请选择参数"
+            android:textSize="15dp"
+            android:paddingLeft="@dimen/content_horizontal_margin"
+            android:paddingTop="@dimen/content_vertical_margin"
+            android:paddingBottom="@dimen/content_vertical_margin"
+            android:gravity="center"
+            />
+
+        <Spinner
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_scout"
+            android:layout_weight="0.60"
+            android:entries="@array/spinnerName"/>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_search_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/card"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,135 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".model.Fragment.TeamRankFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:id="@+id/east_team_rank_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/card"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_east_rank"
+            android:paddingTop="@dimen/content_vertical_margin"
+            android:paddingBottom="@dimen/content_vertical_margin"
+            android:paddingLeft="@dimen/twice_activity_horizontal_margin"
+            android:paddingRight="@dimen/content_horizontal_margin"
+            android:textSize="@dimen/titleSize"/>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/east_team_rank_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="70dip"
+            android:layout_height="30dp"
+            android:text="排名"
+            android:textSize="@dimen/rankSize" />
+
+        <TextView
+            android:layout_width="90dip"
+            android:layout_height="30dp"
+            android:text="球队"
+            android:textSize="@dimen/rankSize" />
+
+        <TextView
+            android:layout_width="70dip"
+            android:layout_height="30dp"
+            android:text="胜/负"
+            android:textSize="@dimen/rankSize" />
+
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="30dp"
+            android:text="胜场差"
+            android:textSize="@dimen/rankSize" />
+
+    </LinearLayout>
+
+    <com.sora.projectn.utils.MyListView
+        android:id="@+id/east_team_rank_lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/east_team_rank_title">
+    </com.sora.projectn.utils.MyListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/card"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_below="@id/east_team_rank_layout"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_west_rank"
+            android:paddingTop="@dimen/content_vertical_margin"
+            android:paddingBottom="@dimen/content_vertical_margin"
+            android:paddingLeft="@dimen/twice_activity_horizontal_margin"
+            android:paddingRight="@dimen/content_horizontal_margin"
+            android:textSize="@dimen/titleSize"/>
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/west_team_rank_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="70dip"
+                android:layout_height="30dp"
+                android:text="排名"
+                android:textSize="@dimen/rankSize" />
+
+            <TextView
+                android:layout_width="90dip"
+                android:layout_height="30dp"
+                android:text="球队"
+                android:textSize="@dimen/rankSize" />
+
+            <TextView
+                android:layout_width="70dip"
+                android:layout_height="30dp"
+                android:text="胜/负"
+                android:textSize="@dimen/rankSize" />
+
+            <TextView
+                android:layout_width="100dip"
+                android:layout_height="30dp"
+                android:text="胜场差"
+                android:textSize="@dimen/rankSize" />
+
+        </LinearLayout>
+
+        <com.sora.projectn.utils.MyListView
+            android:id="@+id/west_team_rank_lv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/east_team_rank_title">
+        </com.sora.projectn.utils.MyListView>
+    </LinearLayout>
+</RelativeLayout>
+</ScrollView>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.sora.projectn.model.Activity.CoachActivity">
+
+    <include layout="@layout/custom_toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:orientation="horizontal">
+
+
+
+            <LinearLayout
+                android:id="@+id/player_Info_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin">
+
+                <!--球员名字-->
+                <TextView
+                    android:id="@+id/tv_playerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/teamTitleSize"/>
+
+                <!--年龄-->
+                <TextView
+                    android:id="@+id/tv_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_white"
+                    android:textSize="@dimen/teamInfoSize"
+                    android:layout_marginTop="@dimen/teamInfo_vertical_margin"
+                    android:layout_marginLeft="@dimen/team_horizontal_margin"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/teamInfo_vertical_margin"
+                    android:layout_marginLeft="@dimen/team_horizontal_margin">
+
+                    <!--生涯最高分-->
+                    <TextView
+                        android:id="@+id/tv_cHS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/teamInfoSize"/>
+
+                    <!--赛季最高分-->
+                    <TextView
+                        android:id="@+id/tv_sHS"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_white"
+                        android:textSize="@dimen/teamInfoSize"
+                        android:layout_marginLeft="20dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--宽5dp的空白区域 UI优化需要-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp">
+
+        </View>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--导航栏-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/guide_vertical_margin">
+
+            <TextView
+                android:id="@+id/tv_playerGuide1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="  基本信息  "
+                android:textSize="15sp"
+                android:textColor="@color/text_white"
+                android:alpha="0.5"/>
+
+
+            <TextView
+                android:id="@+id/tv_playerGuide2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="赛季基础数据"
+                android:textSize="15sp"
+                android:textColor="@color/text_white"
+                android:alpha="0.5" />
+
+            <TextView
+                android:id="@+id/tv_playerGuide3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="赛季高阶数据"
+                android:textSize="15sp"
+                android:textColor="@color/text_white"
+                android:alpha="0.5"/>
+
+
+
+        </LinearLayout>
+
+
+        <!--滑块-->
+        <ImageView
+            android:id="@+id/iv_playerCursor"
+            android:layout_width="9dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/guide_vertical_margin"
+            android:src="@color/color_white"
+            android:scaleType="matrix">
+
+        </ImageView>
+
+        <!--ViewPager-->
+        <include layout="@layout/myviewpager"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+

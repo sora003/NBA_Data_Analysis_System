@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".model.Fragment.CoachTrainFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:background="@color/card">
+
+        <TextView
+            android:id="@+id/tv_playerState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hint"
+            android:textSize="@dimen/teamGuideSize"
+            android:textColor="@color/color_grey"
+            android:paddingLeft="@dimen/content_horizontal_margin"
+            android:paddingTop="@dimen/content_vertical_margin"
+            android:paddingBottom="@dimen/content_vertical_margin"/>
+
+        <ListView
+            android:id="@+id/lv_playerState"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+
+    </LinearLayout>
+
+
+</LinearLayout>
