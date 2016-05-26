@@ -1,7 +1,6 @@
 package com.sora.projectn.utils.Adapter;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,19 +8,19 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.sora.projectn.R;
+import com.sora.projectn.utils.beans.DayRankInfo;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by qhy on 2016/4/19.
  */
 public class DayRankAdapter extends BaseAdapter{
 
-    private List<Map<String,String>> rank;
+    private List<DayRankInfo> rank;
     private LayoutInflater inflater;
 
-    public DayRankAdapter(List<Map<String,String>> rank,Context context){
+    public DayRankAdapter(List<DayRankInfo> rank,Context context){
         this.rank = rank;
         this.inflater = LayoutInflater.from(context);
     }
@@ -59,13 +58,10 @@ public class DayRankAdapter extends BaseAdapter{
             view.setTag(vh);
 
         }
-        vh.name.setText(rank.get(position).get("name"));
-        vh.teamname.setText(rank.get(position).get("teamName"));
-        vh.data.setText(rank.get(position).get("data"));
+        vh.name.setText(rank.get(position).getName());
+        vh.teamname.setText(rank.get(position).getTeamName());
+        vh.data.setText(rank.get(position).getData());
 
-        int[] colors = { Color.WHITE, Color.rgb(219, 238, 244) };//RGB颜色
-
-        view.setBackgroundColor(colors[position % 2]);// 每隔item之间颜色不同
 
         return view;
     }

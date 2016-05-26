@@ -1,7 +1,6 @@
 package com.sora.projectn.utils.Adapter;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,18 +8,18 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.sora.projectn.R;
+import com.sora.projectn.utils.beans.PlayerMatchInfo;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by qhy on 2016/4/26.
  */
 public class MatchPlayerAdapter extends BaseAdapter {
 
-    private List<Map<String,String>> match_player_infos;
+    private List<PlayerMatchInfo> match_player_infos;
     private LayoutInflater inflater;
-    public MatchPlayerAdapter(List<Map<String,String>> match_player_infos ,Context context){
+    public MatchPlayerAdapter(List<PlayerMatchInfo> match_player_infos ,Context context){
         this.match_player_infos = match_player_infos;
         inflater = LayoutInflater.from(context);
     }
@@ -60,21 +59,17 @@ public class MatchPlayerAdapter extends BaseAdapter {
             vh = new ViewHolder(view);
             view.setTag(vh);
         }
-        vh.player_two.setText(String.valueOf(Integer.parseInt(match_player_infos.get(position).get("twoHit"))*2));
-        vh.player_three.setText(String.valueOf(Integer.parseInt(match_player_infos.get(position).get("threeHit"))*2));
-        vh.player_name.setText(match_player_infos.get(position).get("playerName"));
-        vh.player_foul.setText(match_player_infos.get(position).get("foul"));
-        vh.player_blockshot.setText(match_player_infos.get(position).get("blockShot"));
-        vh.player_ass.setText(match_player_infos.get(position).get("ass"));
-        vh.player_turnover.setText(match_player_infos.get(position).get("turnOver"));
-        vh.player_reb.setText(match_player_infos.get(position).get("reb"));
-        vh.player_score.setText(match_player_infos.get(position).get("score"));
-        vh.player_steal.setText(match_player_infos.get(position).get("steal"));
+        vh.player_two.setText(String.valueOf(Integer.parseInt(match_player_infos.get(position).getTwoHit())*2));
+        vh.player_three.setText(String.valueOf(Integer.parseInt(match_player_infos.get(position).getThreeHit())*2));
+        vh.player_name.setText(match_player_infos.get(position).getPlayerName());
+        vh.player_foul.setText(match_player_infos.get(position).getFoul());
+        vh.player_blockshot.setText(match_player_infos.get(position).getBlockShot());
+        vh.player_ass.setText(match_player_infos.get(position).getAss());
+        vh.player_turnover.setText(match_player_infos.get(position).getTurnOver());
+        vh.player_reb.setText(match_player_infos.get(position).getTotReb());
+        vh.player_score.setText(match_player_infos.get(position).getScore());
+        vh.player_steal.setText(match_player_infos.get(position).getSteal());
 
-
-        int[] colors = { Color.WHITE, Color.rgb(219, 238, 244) };//RGB颜色
-
-        view.setBackgroundColor(colors[position % 2]);// 每隔item之间颜色不同
 
         return view;
     }

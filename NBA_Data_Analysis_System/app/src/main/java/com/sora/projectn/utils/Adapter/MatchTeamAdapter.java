@@ -1,7 +1,6 @@
 package com.sora.projectn.utils.Adapter;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,18 +8,18 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.sora.projectn.R;
+import com.sora.projectn.utils.beans.TeamMatchInfo;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by qhy on 2016/4/26.
  */
 public class MatchTeamAdapter extends BaseAdapter {
 
-    private List<Map<String,String>> match_team_infos;
+    private List<TeamMatchInfo> match_team_infos;
     private LayoutInflater inflater;
-    public MatchTeamAdapter(List<Map<String,String>> match_team_infos ,Context context){
+    public MatchTeamAdapter(List<TeamMatchInfo> match_team_infos ,Context context){
         this.match_team_infos = match_team_infos;
         inflater = LayoutInflater.from(context);
     }
@@ -60,23 +59,20 @@ public class MatchTeamAdapter extends BaseAdapter {
             vh = new ViewHolder(view);
             view.setTag(vh);
         }
-        vh.team_two.setText(String.valueOf(Integer.parseInt(match_team_infos.get(position).get("twoHit"))*2));
-        vh.team_three.setText(String.valueOf(Integer.parseInt(match_team_infos.get(position).get("threeHit"))*3));
+        vh.team_two.setText(String.valueOf(Integer.parseInt(match_team_infos.get(position).getTwoHit())*2));
+        vh.team_three.setText(String.valueOf(Integer.parseInt(match_team_infos.get(position).getThreeHit())*3));
         //现在只有ID
-        vh.team_name.setText(match_team_infos.get(position).get("name"));
-        vh.team_ifHome.setText(match_team_infos.get(position).get("ifHome").equals("1")?"是":"否");
-        vh.team_foul.setText(match_team_infos.get(position).get("foul"));
-        vh.team_blockshot.setText(match_team_infos.get(position).get("blockShot"));
-        vh.team_ass.setText(match_team_infos.get(position).get("ass"));
-        vh.team_turnover.setText(match_team_infos.get(position).get("turnOver"));
-        vh.team_reb.setText(match_team_infos.get(position).get("reb"));
-        vh.team_score.setText(match_team_infos.get(position).get("score"));
-        vh.team_steal.setText(match_team_infos.get(position).get("steal"));
+        vh.team_name.setText(match_team_infos.get(position).getName());
+        vh.team_ifHome.setText(match_team_infos.get(position).getIfHome().equals("1")?"是":"否");
+        vh.team_foul.setText(match_team_infos.get(position).getFoul());
+        vh.team_blockshot.setText(match_team_infos.get(position).getBlockShot());
+        vh.team_ass.setText(match_team_infos.get(position).getAss());
+        vh.team_turnover.setText(match_team_infos.get(position).getTurnOver());
+        vh.team_reb.setText(match_team_infos.get(position).getTotReb());
+        vh.team_score.setText(match_team_infos.get(position).getScore());
+        vh.team_steal.setText(match_team_infos.get(position).getSteal());
 
 
-        int[] colors = { Color.WHITE, Color.rgb(219, 238, 244) };//RGB颜色
-
-        view.setBackgroundColor(colors[position % 2]);// 每隔item之间颜色不同
 
         return view;
     }

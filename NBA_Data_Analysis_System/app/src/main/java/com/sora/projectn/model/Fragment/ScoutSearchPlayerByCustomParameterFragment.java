@@ -101,10 +101,7 @@ public class ScoutSearchPlayerByCustomParameterFragment extends Fragment {
                         new AlertDialog.Builder(mContext).setTitle("提醒").setMessage("语法错误").setNegativeButton("确定", null).show();
                     }
                     else{
-                        if(!generateKeysForAllPlayer(getSentenceByToken(token))){
-                            new AlertDialog.Builder(mContext).setTitle("提醒").setMessage("没有相应的参数").setNegativeButton("确定", null).show();
-                            return;
-                        }
+                        generateKeysForAllPlayer(getSentenceByToken(token));
                         list = getPlayerListOrderedBtKey();
 
                         setView();
@@ -387,17 +384,9 @@ public class ScoutSearchPlayerByCustomParameterFragment extends Fragment {
                     expression=expression+value;
                 }
                 //数据类型是double,本来该写else if的
-                else if(parameter.equals("time")||parameter.equals("twoHit")||parameter.equals("twoShot")||parameter.equals("threeHit")||parameter.equals("threeShot")
-                        ||parameter.equals("freeThrowHit")||parameter.equals("freeThrowShot")||parameter.equals("offReb")||parameter.equals("defReb")||parameter.equals("ass")
-                        ||parameter.equals("steal")||parameter.equals("blockShot")||parameter.equals("turnOver")||parameter.equals("foul")||parameter.equals("score")||parameter.equals("twoRate")
-                        ||parameter.equals("threeRate")||parameter.equals("freeThrowRate")||parameter.equals("trueRate")||parameter.equals("doubleDouble")||parameter.equals("tripleDouble")
-                        ||parameter.equals("per")){
+                else{
                     double value=(double)player.getInfoByParameter(parameter);
                     expression=expression+value;
-                }
-                else{
-
-                    return false;
                 }
             }
             else{
@@ -423,9 +412,7 @@ public class ScoutSearchPlayerByCustomParameterFragment extends Fragment {
     private boolean generateKeysForAllPlayer(ArrayList<String> sentence){
 
         for(int i=0; i<players.size(); i++){
-            if(!generateKeyForAPlayer(sentence, players.get(i))){
-                return false;
-            }
+            generateKeyForAPlayer(sentence, players.get(i));
         }
 
         return true;
