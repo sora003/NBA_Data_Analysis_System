@@ -59,7 +59,10 @@ public class WelcomeActivity extends AppCompatActivity{
                 /**
                  * 默认设置关注球队
                  */
-                SharedPreferencesHelper.setFavTeam(getApplicationContext(),"灰熊");
+                if (SharedPreferencesHelper.getFavTeam(getApplicationContext()).equals("")){
+                    SharedPreferencesHelper.setFavTeam(getApplicationContext(),"灰熊");
+                }
+
 
 
                 /**

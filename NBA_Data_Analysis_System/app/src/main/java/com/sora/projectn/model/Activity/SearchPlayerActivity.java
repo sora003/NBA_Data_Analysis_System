@@ -122,6 +122,7 @@ public class SearchPlayerActivity extends Activity {
 
                         Bundle b = new Bundle();
                         b.putInt("id", result.get(position).getPlayerId());
+                        System.out.println("CCCCAAAACCCCCCCCCAAAAA"+id);
 
                         Intent intent = new Intent(SearchPlayerActivity.this, PlayerInfoActivity.class);
                         intent.putExtra("bundleData", b);

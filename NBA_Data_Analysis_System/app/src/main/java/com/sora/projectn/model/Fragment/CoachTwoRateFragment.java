@@ -92,6 +92,16 @@ public class CoachTwoRateFragment extends Fragment {
 
     }
 
+    @Override
+    public void onDestroyView() {
+        players = new ArrayList<>();
+        teamPlayers = new ArrayList<>();
+        trainingInfoList = new ArrayList<>();
+        playerRecommend = new ArrayList<>();
+
+        super.onDestroyView();
+    }
+
     /**
      * 接收Activity传递的参数
      */

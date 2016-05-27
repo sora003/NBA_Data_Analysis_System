@@ -148,6 +148,14 @@ public class ScoutSearchPlayerFragment extends Fragment {
 
     }
 
+    @Override
+    public void onDestroyView() {
+        list = new ArrayList<>();
+        players = new ArrayList<SearchPlayerInfo>(500);
+
+        super.onDestroyView();
+    }
+
     /**
      * 初始化
      */

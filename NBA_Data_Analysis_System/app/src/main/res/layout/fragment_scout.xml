@@ -7,8 +7,6 @@
     android:background="@color/colorPrimary"
     tools:context="com.sora.projectn.model.Activity.CoachActivity">
 
-    <include layout="@layout/custom_toolbar"/>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

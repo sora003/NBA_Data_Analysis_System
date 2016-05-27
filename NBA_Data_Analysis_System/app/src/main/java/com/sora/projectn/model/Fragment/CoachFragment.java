@@ -32,6 +32,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.sora.projectn.R;
+import com.sora.projectn.model.Activity.TeamCombatListActivity;
 import com.sora.projectn.model.Fragment.CoachFreeThrowRateFragment;
 
 import com.sora.projectn.model.Fragment.CoachThreeRateFragment;
@@ -43,6 +44,7 @@ import com.sora.projectn.utils.BitmapHelper;
 import com.sora.projectn.utils.Consts;
 
 import com.sora.projectn.utils.GetHttpResponse;
+import com.sora.projectn.utils.SharedPreferencesHelper;
 import com.sora.projectn.utils.beans.PlayerTrainingInfo;
 
 import org.json.JSONArray;
@@ -63,6 +65,7 @@ public class CoachFragment extends Fragment {
      */
     private int id=0;
     private Map<String,String> infoMap = new HashMap<>();
+    private Map<String,Integer> infoMap2 = new HashMap<>();
 
     //Fragment
     private CoachTrainFragment coachTrainFragment;
@@ -73,7 +76,6 @@ public class CoachFragment extends Fragment {
     //ViewPager
     private ViewPager viewPager;
 
-    private Toolbar toolbar;
 
     //TextView
     private TextView tv_teamGuide1_Coach;
@@ -115,26 +117,28 @@ public class CoachFragment extends Fragment {
         fView = view;
 
         mContext = this.getActivity();
+        infoMap2 = getTeamsId();
 
         initView();
-
         parseIntent();
 
         initViewPager();
         initListener();
-
 
         //获取球队基本信息
         new Thread(new Runnable() {
             @Override
             public void run() {
                 infoMap = getTeamInfo();
+
                 if (infoMap == null){
                     handler.sendEmptyMessage(Consts.RES_ERROR);
                 }
                 else {
                     handler.sendEmptyMessage(Consts.SET_VIEW);
                 }
+
+
             }
         }).start();
 
@@ -168,11 +172,16 @@ public class CoachFragment extends Fragment {
      * 获取Intent传递来的abbr值
      */
     private void parseIntent() {
+
         Intent intent = getActivity().getIntent();
         Bundle bundle = intent.getExtras();
-//        id = bundle.getInt("id");
-        id=2;//>>>>>>>>>>>>>
+
+        id = infoMap2.get(SharedPreferencesHelper.getFavTeam(mContext));
+
+
+        System.out.println("XCCCXXXXXXXXXXXXXXXXXXXXXXXX  "+id);
         //需要统一Fragment实例化对象 采用全局变量定义
+
         bundle = new Bundle();
         bundle.putInt("id", id);
 
@@ -193,20 +202,6 @@ public class CoachFragment extends Fragment {
 
         mContext = this.getActivity();
 
-
-        toolbar = (Toolbar) fView.findViewById(R.id.toolbar);
-
-        //设置Toolbar标题
-        toolbar.setTitle("教练功能");
-        //设置标题颜色
-        toolbar.setTitleTextColor(getResources().getColor(R.color.color_white));
-        //设置返回键可用
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                finish();
-            }
-        });
 
         //TextView
         tv_teamGuide1_Coach = (TextView) fView.findViewById(R.id.tv_teamGuide1_Coach);
@@ -317,6 +312,11 @@ public class CoachFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 System.out.println("COMBAT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                Bundle bundle= new Bundle();
+                bundle.putInt("teamId", id);
+                Intent intent = new Intent(mContext, TeamCombatListActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
             }
         });
 
@@ -529,4 +529,43 @@ public class CoachFragment extends Fragment {
     public void setPlayerTrainingInfoList(ArrayList<PlayerTrainingInfo> playerTrainingInfoList) {
         this.playerTrainingInfoList = playerTrainingInfoList;
     }
+
+    protected Map<String,Integer> getTeamsId() {
+
+        Map<String,Integer> map = new HashMap<>();
+        map.put("老鹰",1);
+        map.put("凯尔特人",2);
+        map.put("鹈鹕",3);
+        map.put("公牛",4);
+        map.put("骑士",5);
+        map.put("小牛",6);
+        map.put("掘金",7);
+        map.put("活塞",8);
+        map.put("勇士",9);
+        map.put("火箭",10);
+        map.put("步行者",11);
+        map.put("快船",12);
+        map.put("湖人",13);
+        map.put("热火",14);
+        map.put("雄鹿",15);
+        map.put("森林狼",16);
+        map.put("篮网",17);
+        map.put("尼克斯",18);
+        map.put("魔术",19);
+        map.put("76人",20);
+        map.put("太阳",21);
+        map.put("开拓者",22);
+        map.put("国王",23);
+        map.put("马刺",24);
+        map.put("雷霆",25);
+        map.put("爵士",26);
+        map.put("奇才",27);
+        map.put("猛龙",28);
+        map.put("灰熊",29);
+        map.put("黄蜂",30);
+
+        return map;
+
+    }
+
 }

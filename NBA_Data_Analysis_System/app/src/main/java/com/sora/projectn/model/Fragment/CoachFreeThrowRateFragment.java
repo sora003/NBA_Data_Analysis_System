@@ -86,10 +86,18 @@ public class CoachFreeThrowRateFragment extends Fragment {
             }
         }).start();
 
-
-
         return view;
 
+    }
+
+    @Override
+    public void onDestroyView() {
+        players = new ArrayList<>();
+        teamPlayers = new ArrayList<>();
+        trainingInfoList = new ArrayList<>();
+        playerRecommend = new ArrayList<>();
+
+        super.onDestroyView();
     }
 
     /**
@@ -130,10 +138,7 @@ public class CoachFreeThrowRateFragment extends Fragment {
                         }
                     }).start();
 
-
                     break;
-
-
 
                 case ALREADY_GET_PLAYER_DATA_2:
                     players=(ArrayList<SearchPlayerInfo>)msg.obj;

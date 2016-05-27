@@ -91,7 +91,9 @@ public class TeamFavActivity extends AppCompatActivity{
 
         }
 
-        private void setView() {
+
+
+    private void setView() {
             textView_fav.setText(teamName);
         }
 
@@ -150,7 +152,8 @@ public class TeamFavActivity extends AppCompatActivity{
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    finish();
+                    startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                    System.exit(0);
                 }
             });
 

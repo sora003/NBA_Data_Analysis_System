@@ -92,6 +92,16 @@ public class CoachThreeRateFragment extends Fragment {
 
     }
 
+    @Override
+    public void onDestroyView() {
+        players = new ArrayList<>();
+        teamPlayers = new ArrayList<>();
+        trainingInfoList = new ArrayList<>();
+        playerRecommend = new ArrayList<>();
+
+        super.onDestroyView();
+    }
+
     /**
      * 接收Activity传递的参数
      */
@@ -211,6 +221,7 @@ public class CoachThreeRateFragment extends Fragment {
                             }
                         }
                         playerMatchingInfo.setState(trainingInfoList.get(j).getState());
+                        System.out.println("QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ");
                         playerRecommend.add(playerMatchingInfo);
                     }
 

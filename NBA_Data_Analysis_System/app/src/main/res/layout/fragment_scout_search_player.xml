@@ -24,9 +24,9 @@
 
         <Spinner
             android:layout_width="130dp"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:id="@+id/spinner_scout"
-            android:layout_weight="0.60"
+            android:layout_weight="0.6"
             android:entries="@array/spinnerName"/>
     </LinearLayout>
 
