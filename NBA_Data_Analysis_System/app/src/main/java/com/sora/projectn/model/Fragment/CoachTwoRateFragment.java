@@ -174,10 +174,11 @@ public class CoachTwoRateFragment extends Fragment {
                                             JSONObject JO = jsonArray.getJSONObject(i);
                                             int playerId=JO.getInt("id");
                                             SearchPlayerInfo searchPlayerInfo = getPlayerByPlayerId(playerId);
+                                            if(searchPlayerInfo!=null) {
+                                                System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA  " + searchPlayerInfo.getPlayerId() + "   " + searchPlayerInfo.getTwoRate());
 
-                                            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA  "+searchPlayerInfo.getPlayerId()+"   "+searchPlayerInfo.getTwoRate());
-
-                                            teamPlayers.add(searchPlayerInfo);
+                                                teamPlayers.add(searchPlayerInfo);
+                                            }
                                         }
 
                                     } catch (JSONException e) {

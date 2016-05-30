@@ -169,10 +169,11 @@ public class CoachFreeThrowRateFragment extends Fragment {
                                             JSONObject JO = jsonArray.getJSONObject(i);
                                             int playerId=JO.getInt("id");
                                             SearchPlayerInfo searchPlayerInfo = getPlayerByPlayerId(playerId);
+                                            if(searchPlayerInfo!=null) {
+                                                System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA  " + searchPlayerInfo.getPlayerId() + "   " + searchPlayerInfo.getThreeRate());
 
-                                            System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA  "+searchPlayerInfo.getPlayerId()+"   "+searchPlayerInfo.getThreeRate());
-
-                                            teamPlayers.add(searchPlayerInfo);
+                                                teamPlayers.add(searchPlayerInfo);
+                                            }
                                         }
 
                                     } catch (JSONException e) {

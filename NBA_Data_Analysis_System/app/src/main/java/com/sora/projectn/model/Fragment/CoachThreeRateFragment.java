@@ -173,11 +173,17 @@ public class CoachThreeRateFragment extends Fragment {
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             JSONObject JO = jsonArray.getJSONObject(i);
                                             int playerId=JO.getInt("id");
+
+                                            System.out.println("id = "+playerId+"   ");
+
+
                                             SearchPlayerInfo searchPlayerInfo = getPlayerByPlayerId(playerId);
+                                            if(searchPlayerInfo!=null){
+                                                System.out.print("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA  " + searchPlayerInfo.getPlayerId() + "   ");
+                                                System.out.println(searchPlayerInfo.getThreeRate());
+                                                teamPlayers.add(searchPlayerInfo);
+                                            }
 
-                                                System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA  "+searchPlayerInfo.getPlayerId()+"   "+searchPlayerInfo.getThreeRate());
-
-                                            teamPlayers.add(searchPlayerInfo);
                                         }
 
                                     } catch (JSONException e) {
